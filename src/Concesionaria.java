@@ -15,7 +15,7 @@ public class Concesionaria {
         listaPruebas = new ArrayList<>();
     }
 
-    // Vehículos
+    // vehiculos
     public void registrarVehiculo(Vehiculo v) {
         listaVehiculos.add(v);
         System.out.println(" Vehículo registrado: " + v.getModelo() + " (" + v.getColor() + ")");
@@ -30,20 +30,20 @@ public class Concesionaria {
         }
     }
 
-    // Clientes
+    // cliente
     public void registrarCliente(Cliente c) {
         listaClientes.add(c);
         System.out.println(" Cliente registrado: " + c.getNombre());
     }
 
-    // Ventas
+    // venta
     public void realizarVenta(Venta v) {
         listaVentas.add(v);
         System.out.println(" Venta realizada con éxito!");
         v.generarRecibo();
     }
 
-    // Pruebas de manejo
+    // prueba
     public void agendarPrueba(PruebaDeManejo p) {
         listaPruebas.add(p);
         p.agendar();
