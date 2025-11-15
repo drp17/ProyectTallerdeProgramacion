@@ -26,9 +26,17 @@ public class Vehiculo {
         System.out.println(" El vehículo " + modelo + " (" + color + ") ha sido vendido.");
     }
 
-    // Getters
-    public boolean isDisponible() { return disponible; }
-    public String getColor() { return color; }
-    public String getModelo() { return modelo; }
-    public double getPrecio() { return precio; }
+
+    public boolean isDisponible() { 
+        return disponible; 
+    }
+    public String getColor() {
+        return color; 
+    }
+    public String getModelo() {
+        return modelo; 
+    }
+    public double getPrecio() { 
+        return precio; 
+    }
 }
