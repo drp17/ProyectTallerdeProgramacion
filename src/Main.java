@@ -28,7 +28,7 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    // Registrar vehículo
+                    
                     System.out.print("Marca: ");
                     String marca = sc.nextLine();
                     System.out.print("Modelo: ");
@@ -47,7 +47,7 @@ public class Main {
                     break;
 
                 case 2:
-                    // Agendar prueba de manejo
+                    
                     System.out.print("Nombre del cliente: ");
                     String nombreCliente = sc.nextLine();
                     System.out.print("DNI del cliente: ");
@@ -75,12 +75,12 @@ public class Main {
                     break;
 
                 case 3:
-                    // Ver stock
+                    
                     kia.mostrarVehiculosDisponibles();
                     break;
 
                 case 4:
-                    // Realizar venta
+                   
                     kia.mostrarVehiculosDisponibles();
                     System.out.print("Ingresa el número del vehículo a vender (comenzando en 0): ");
                     int indice = sc.nextInt();
@@ -104,7 +104,7 @@ public class Main {
                     break;
 
                 case 5:
-                    // Ver ventas realizadas
+                    
                     if (kia.getListaVentas().isEmpty()) {
                         System.out.println(" No hay ventas registradas aún.");
                     } else {
@@ -125,7 +125,7 @@ public class Main {
                     break;
             }
 
-            // Pregunta si desea realizar otra acción
+            
             if (opcion != 0) {
                 System.out.print("\n¿Deseas realizar otra acción? (S/N): ");
                 String respuesta = sc.nextLine();
