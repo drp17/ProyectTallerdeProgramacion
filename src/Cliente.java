@@ -15,7 +15,7 @@ public class Cliente {
         System.out.println("Nombre: " + nombre + ", DNI: " + dni + ", Tel: " + telefono + ", Correo: " + correo);
     }
 
-    // Getters
+  
     public String getNombre() { return nombre; }
     public String getDni() { return dni; }
 }
