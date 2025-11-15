@@ -48,6 +48,8 @@ class PruebaDeManejo {
   - vehiculo: Vehiculo
   - fecha: String
   - hora: String
+ + mostrarDetallesPrueba(): void
+
 }
 
 
