@@ -21,7 +21,11 @@ public class PruebaDeManejo {
         System.out.println(" Prueba de manejo cancelada para " + cliente.getNombre());
     }
 
-    // Getters
-    public Vehiculo getVehiculo() { return vehiculo; }
-    public Cliente getCliente() { return cliente; }
+
+    public Vehiculo getVehiculo() { 
+        return vehiculo; 
+    }
+    public Cliente getCliente() { 
+        return cliente; 
+    }
 }
