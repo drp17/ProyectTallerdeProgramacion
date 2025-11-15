@@ -49,9 +49,17 @@ public class Concesionaria {
         p.agendar();
     }
 
-    // Getters
-    public ArrayList<Vehiculo> getListaVehiculos() { return listaVehiculos; }
-    public ArrayList<Cliente> getListaClientes() { return listaClientes; }
-    public ArrayList<Venta> getListaVentas() { return listaVentas; }
-    public ArrayList<PruebaDeManejo> getListaPruebas() { return listaPruebas; }
+    
+    public ArrayList<Vehiculo> getListaVehiculos() { 
+        return listaVehiculos; 
+    }
+    public ArrayList<Cliente> getListaClientes() { 
+        return listaClientes; 
+    }
+    public ArrayList<Venta> getListaVentas() {
+        return listaVentas; 
+    }
+    public ArrayList<PruebaDeManejo> getListaPruebas() {
+        return listaPruebas; 
+    }
 }
