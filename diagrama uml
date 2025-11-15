@@ -1,0 +1,70 @@
+ concesionaria
+
+class Concesionaria {
+  - nombre: String
+  - listaVehiculos: ArrayList<Vehiculo>
+  - listaClientes: ArrayList<Cliente>
+  - listaVentas: ArrayList<Venta>
+  - listaPruebas: ArrayList<PruebaDeManejo>
+
+  + registrarVehiculo(v: Vehiculo): void
+  + registrarCliente(c: Cliente): void
+  + realizarVenta(v: Venta): void
+  + agendarPrueba(p: PruebaDeManejo): void
+}
+
+class Vehiculo {
+  - marca: String
+  - modelo: String
+  - año: int
+  - precio: double
+  - disponible: boolean
+
+  + mostrarDetalles(): void
+  + marcarComoVendido(): void
+}
+
+class Venta {
+  - idVenta: int
+  - cliente: Cliente
+  - vehiculo: Vehiculo
+  - fecha: String
+  - montoTotal: double
+
+  + generarRecibo(): void
+}
+
+class Cliente {
+  - nombre: String
+  - dni: String
+  - telefono: String
+  - correo: String
+
+  + mostrarInformacion(): void
+}
+
+class PruebaDeManejo {
+  - cliente: Cliente
+  - vehiculo: Vehiculo
+  - fecha: String
+  - hora: String
+}
+
+
+Concesionaria "1" o-- "0..*" Vehiculo : administra
+Concesionaria "1" o-- "0..*" Cliente : registra
+Concesionaria "1" o-- "0..*" Venta : realiza
+Concesionaria "1" o-- "0..*" PruebaDeManejo : organiza
+
+Cliente "1" -- "0..*" Venta : realiza
+Cliente "1" -- "0..*" PruebaDeManejo : agenda
+
+Vehiculo "1" -- "0..1" Venta : "se vende en"
+Vehiculo "1" -- "0..*" PruebaDeManejo : "se usa en"
+
+Venta "1" --> "1" Cliente : pertenece a
+Venta "1" --> "1" Vehiculo : incluye
+
+PruebaDeManejo "1" --> "1" Cliente : pertenece a
+PruebaDeManejo "1" --> "1" Vehiculo : pertenece a
+
