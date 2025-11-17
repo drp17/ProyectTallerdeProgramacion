@@ -49,6 +49,7 @@ class PruebaDeManejo {
   - vehiculo: Vehiculo
   - fecha: String
   - hora: String
+ + mostrarDetalles(): void
 }
 
 Concesionaria "1" o-- "0..*" Vehiculo : administra
