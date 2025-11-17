@@ -1,4 +1,5 @@
- concesionaria
+
+title Diagrama de Clases - Luxor Motors
 
 class Concesionaria {
   - nombre: String
@@ -48,10 +49,7 @@ class PruebaDeManejo {
   - vehiculo: Vehiculo
   - fecha: String
   - hora: String
- + mostrarDetallesPrueba(): void
-
 }
-
 
 Concesionaria "1" o-- "0..*" Vehiculo : administra
 Concesionaria "1" o-- "0..*" Cliente : registra
@@ -69,4 +67,6 @@ Venta "1" --> "1" Vehiculo : incluye
 
 PruebaDeManejo "1" --> "1" Cliente : pertenece a
 PruebaDeManejo "1" --> "1" Vehiculo : pertenece a
+
+
 
