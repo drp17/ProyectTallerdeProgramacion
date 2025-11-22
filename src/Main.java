@@ -7,7 +7,7 @@ public class Main {
         boolean continuar = true;
 
         while (continuar) {
-            System.out.println("\n=========  SISTEMA KIA MOTORS =========");
+            System.out.println("\n=========  SISTEMA LUXOR MOTORS =========");
             System.out.println("1️  Registrar vehículo");
             System.out.println("2️  Agendar prueba de manejo");
             System.out.println("3️  Verificar stock");
