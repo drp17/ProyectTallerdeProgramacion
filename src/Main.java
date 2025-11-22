@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Concesionaria kia = new Concesionaria("Kia Motors");
+        Concesionaria luxor = new Concesionaria("Luxor Motors");
         boolean continuar = true;
 
         while (continuar) {
@@ -43,7 +43,7 @@ public class Main {
                     sc.nextLine();
 
                     Vehiculo nuevo = new Vehiculo(marca, modelo, anio, color, precio);
-                    kia.registrarVehiculo(nuevo);
+                    luxor.registrarVehiculo(nuevo);
                     break;
 
                 case 2:
@@ -58,9 +58,9 @@ public class Main {
                     String correo = sc.nextLine();
 
                     Cliente cliente = new Cliente(nombreCliente, dni, telefono, correo);
-                    kia.registrarCliente(cliente);
+                    luxor.registrarCliente(cliente);
 
-                    kia.mostrarVehiculosDisponibles();
+                    luxor.mostrarVehiculosDisponibles();
                     System.out.print("Elige el número del vehículo para la prueba (comenzando en 0): ");
                     int vehiculoIndex = sc.nextInt();
                     sc.nextLine();
@@ -70,18 +70,18 @@ public class Main {
                     System.out.print("Hora (HH:mm): ");
                     String hora = sc.nextLine();
 
-                    PruebaDeManejo prueba = new PruebaDeManejo(cliente, kia.getListaVehiculos().get(vehiculoIndex), fecha, hora);
-                    kia.agendarPrueba(prueba);
+                    PruebaDeManejo prueba = new PruebaDeManejo(cliente, luxor.getListaVehiculos().get(vehiculoIndex), fecha, hora);
+                    luxor.agendarPrueba(prueba);
                     break;
 
                 case 3:
                     
-                    kia.mostrarVehiculosDisponibles();
+                    luxor.mostrarVehiculosDisponibles();
                     break;
 
                 case 4:
                    
-                    kia.mostrarVehiculosDisponibles();
+                    luxor.mostrarVehiculosDisponibles();
                     System.out.print("Ingresa el número del vehículo a vender (comenzando en 0): ");
                     int indice = sc.nextInt();
                     sc.nextLine();
@@ -96,20 +96,20 @@ public class Main {
                     String correoC = sc.nextLine();
 
                     Cliente clienteVenta = new Cliente(nomC, dniC, telC, correoC);
-                    kia.registrarCliente(clienteVenta);
+                    luxor.registrarCliente(clienteVenta);
 
-                    Venta venta = new Venta(kia.getListaVentas().size() + 1, clienteVenta,
-                            kia.getListaVehiculos().get(indice), "Hoy");
-                    kia.realizarVenta(venta);
+                    Venta venta = new Venta(luxor.getListaVentas().size() + 1, clienteVenta,
+                            luxor.getListaVehiculos().get(indice), "Hoy");
+                    luxor.realizarVenta(venta);
                     break;
 
                 case 5:
                     
-                    if (kia.getListaVentas().isEmpty()) {
+                    if (luxor.getListaVentas().isEmpty()) {
                         System.out.println(" No hay ventas registradas aún.");
                     } else {
                         System.out.println("\n Ventas realizadas:");
-                        for (Venta v : kia.getListaVentas()) {
+                        for (Venta v : luxor.getListaVentas()) {
                             v.generarRecibo();
                         }
                     }
